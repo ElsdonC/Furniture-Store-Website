@@ -5,8 +5,8 @@ include('includes/navbar.php');
 
 <div class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-md-5 justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
                 <div class="card">
                     <div class="card-header">
                         <h4>Login</h4>

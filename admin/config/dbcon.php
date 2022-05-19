@@ -2,7 +2,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "RPL Seattle"
+$database = "RPL Seattle";
 
 $con = mysqli_connect("$host", "$username", "$password", "$database");
 
