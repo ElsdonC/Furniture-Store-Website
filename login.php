@@ -12,7 +12,7 @@ include('includes/header.php');
 include('includes/navbar.php');
 ?>
 
-<div class="py-5">
+<div style="padding-top: 15vh;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5">
@@ -21,7 +21,7 @@ include('includes/navbar.php');
 
                 <div class="card">
                     <div class="card-header">
-                        <h4>Login</h4>
+                        <h4>Admin Login</h4>
                     </div>
                     <div class="card-body">
                         <form action="logincode.php" method="POST">
