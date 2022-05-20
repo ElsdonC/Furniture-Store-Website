@@ -26,24 +26,24 @@ if(isset($_POST['login_btn'])) {
             'user_email' => $user_email,
         ];
 
-        if($_SESSION['auth_role'] == '1') // 1=admin { 
-            $_SESSION['message'] = "Welcome to dashboard"
+        if($_SESSION['auth_role'] == '1') {// 1=admin
+            $_SESSION['message'] = "Welcome to dashboard";
             header("Location: admin/index.php");
             exit(0);
-        } elseif($_SESSION['auth_role'] == '0') // 0=user {
-            $_SESSION['message'] = "You are logged in"
+        } elseif($_SESSION['auth_role'] == '0') { // 0=user
+            $_SESSION['message'] = "You are logged in";
             header("Location: index.php");
             exit(0);
         }
 
     } else {
-        $_SESSION['message'] = "Invalid Email or Password"
+        $_SESSION['message'] = "Invalid Email or Password";
         header("Location: login.php");
         exit(0);
     }
 
 } else {
-    $_SESSION['message'] = "You are not allowed to access this file"
+    $_SESSION['message'] = "You are not allowed to access this file";
     header("Location: login.php");
     exit(0);
 }

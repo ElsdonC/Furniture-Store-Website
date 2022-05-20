@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+if (isset($_SESSION['auth'])) {
+    if(!isset($_SESSION['message'])) {
+        $_SESSION['message'] = "You are already logged in";
+    }
+    header("Location: index.php");
+    exit(0);
+}
 include('includes/header.php');
 include('includes/navbar.php');
 ?>
@@ -8,6 +16,9 @@ include('includes/navbar.php');
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5">
+
+            <?php include('message.php'); ?>
+
                 <div class="card">
                     <div class="card-header">
                         <h4>Login</h4>

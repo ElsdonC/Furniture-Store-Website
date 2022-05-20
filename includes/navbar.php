@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Royola Pacific</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +22,12 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">My Profile</a></li>
-            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+            <li>
+              <form action="allcode.php" method="POST">
+                <button type="submit" name="logout_btn" class="dropdown-item">Logout</button>
+              </form>
+            </li>
+              
           </ul>
         </li>
         <?php else : ?>
