@@ -29,7 +29,7 @@ include('includes/header.php');
                         </thead>
                         <tbody>
                             <?php
-                                $category = "SELECT * FROM categories";
+                                $category = "SELECT * FROM categories WHERE status!='2'";
                                 $category_run = mysqli_query($con, $category);
 
                                 if(mysqli_num_rows($category_run)>0) {
@@ -45,7 +45,9 @@ include('includes/header.php');
                                                 <a href="category-edit.php?id=<?= $item['id'] ?>" class="btn btn-info">Edit</a>
                                             </td>
                                             <td>
-                                                <a href="" class="btn btn-danger">Delete</a>
+                                                <form action="code.php" method="POST">
+                                                    <button type="submit" name="category_delete" value="<?= $item['id'] ?>" class="btn btn-danger">Delete</a>
+                                                </form>
                                             </td>
                                         </tr>
                                         <?php
