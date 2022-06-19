@@ -1,19 +1,30 @@
-<nav class="navbar navbar-expand-lg bg-light fixed-top">
+<nav class="navbar navbar-expand-lg bg-light">
   <div class="container">
     <img src="Images/Logo.png" alt="logo">
-    <a class="navbar-brand" href="index.php">&nbsp;&nbsp;Royola Pacific</a>
+    <a class="navbar-brand" href="index.php"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Collections</a>
+          <a class="nav-link" aria-current="page" href="index.php">Collections</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ContactUs.php">Contact</a>
-        </li>
+        <?php
+          $navbarCategory = "SELECT * FROM categories WHERE navbar_status='0' AND status='0' ";
+          $navbarCategory_run = mysqli_query($con, $navbarCategory);
+          if(mysqli_num_rows($navbarCategory_run) > 0) {
+            foreach($navbarCategory_run as $navItems) {
+              ?>
+              <li class="nav-item">
+                <a class="nav-link" href="category.php?title=<?= $navItems['slug']; ?>"><?= $navItems['name']; ?></a>
+              </li>
+              <?php
+            }
+          }
+        ?>
+        
 
         <?php if(isset($_SESSION['auth_user'])) : ?>
         <li class="nav-item dropdown">
