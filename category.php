@@ -3,10 +3,8 @@ include('includes/header.php');
 include('includes/navbar.php');
 ?>
 
-<div class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
+<div class="container">
+    <div class="row row-cols-3">
 
                 <?php
                 if(isset($_GET['title'])) {
@@ -16,19 +14,27 @@ include('includes/navbar.php');
                     if(mysqli_num_rows($category_run)>0) {
                         $categoryItem = mysqli_fetch_array($category_run);
                         $category_id = $categoryItem['id'];
-                        $posts = "SELECT category_id,name,slug,created_at FROM posts WHERE category_id='$category_id' ";
+                        $posts = "SELECT category_id,name,slug,meta_title,created_at FROM posts WHERE category_id='$category_id' ";
                         $posts_run = mysqli_query($con, $posts);
                         if(mysqli_num_rows($posts_run)>0) {
                             foreach($posts_run as $postItems) {
                                 ?>
-                                    <a href="post.php?title=<?=$postItems['slug'];?>" class="text-decoration-none">
+                                <a href="post.php?title=<?=$postItems['slug'];?>" class="text-decoration-none">
+                                <div class="card mt-3 mb-3">
+                                    <img class="card-img-top" style="height: 25vh;" src="uploads/posts/<?= $postItems['meta_title'] ?>" alt="<?=$postItems['name'];?>">
+                                    <div class="card-body">
+                                    <h5 class="card-title"><?=$postItems['name'];?></h5>
+                                    </div>
+                                </div>
+                                </a>
+                                    <!-- <a href="post.php?title=<?=$postItems['slug'];?>" class="text-decoration-none">
                                         <div class="card card-body shadow-sm mb-4">
-                                            <h5><?=$postItems['name'];?></h5>
-                                            <div>
-                                                <label class="text-dark me-2">Posted On: <?= date('d-M-Y', strtotime($postItems['created_at'])); ?></label>
+                                            <h5 style="text-align: center;"><?=$postItems['name'];?></h5>
+                                            <div class="d-flex justify-content-center">
+                                                <img src="uploads/posts/<?= $postItems['meta_title'] ?>" class="w-100" alt="<?=$postItems['name'];?>">
                                             </div>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 <?php
                             }
                         } else {
@@ -50,8 +56,6 @@ include('includes/navbar.php');
 
                 
 
-            </div>
-        </div>
     </div>
 </div>
 

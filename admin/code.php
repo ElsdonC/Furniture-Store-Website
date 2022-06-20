@@ -1,7 +1,6 @@
 <?php
 include('authentication.php');
 
-<<<<<<< HEAD
 if(isset($_POST['post_delete_btn'])) {
     $post_id = $_POST['post_delete_btn'];
     $check_img_query = "SELECT * FROM posts WHERE id='$post_id' LIMIT 1";
@@ -106,11 +105,12 @@ if(isset($_POST['post_add'])) {
 
 if(isset($_POST['category_delete'])) {
     $category_id = $_POST['category_delete'];
-=======
+}
+
 if(isset($_POST['category_delete'])) {
     $category_id = $_POST['category_delete'];
-    //2 = delete
->>>>>>> 8dca751c53cd11c4005b78fa89627ab1863e461d
+    // 2 = delete
+
     $query = "UPDATE categories SET status='2' WHERE id='$category_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 

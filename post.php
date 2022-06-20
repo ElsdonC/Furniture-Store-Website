@@ -5,8 +5,8 @@ include('includes/navbar.php');
 
 <div class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-md-9">
+        <div class="row d-flex justify-content-center">
+            <div class="col-13">
                 <?php
                     if(isset($_GET['title'])) {
                         $slug = mysqli_real_escape_string($con, $_GET['title']);
@@ -17,13 +17,16 @@ include('includes/navbar.php');
                                 ?>
                                         <div class="card shadow-sm mb-4">
                                             <div class="card-header">
-                                                <h5><?=$postItems['name'];?></h5>
+                                                <h5 style="text-align: center;"><?=$postItems['name'];?></h5>
                                             </div>
                                             
                                             <div class="card-body">
-                                                <label class="text-dark me-2">Posted On: <?= date('d-M-Y', strtotime($postItems['created_at'])); ?></label>
-                                                <hr/>
-                                                <img src="uploads/posts/<?= $postItems['meta_title'] ?>" class="w-50" alt="<?=$postItems['name'];?>">
+                                                <!-- <label class="text-dark me-2">Posted On: <?= date('d-M-Y', strtotime($postItems['created_at'])); ?></label> -->
+                                                <!-- <hr/> -->
+                                                <div class="d-flex justify-content-center" style="height: 50vh; width: auto;">
+                                                    <img src="uploads/posts/<?= $postItems['meta_title'] ?>" alt="<?=$postItems['name'];?>">
+                                                    
+                                                </div>
                                                 <div>
                                                     <?=$postItems['description'];?>
                                                 </div>

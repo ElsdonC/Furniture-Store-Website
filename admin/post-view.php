@@ -39,9 +39,9 @@ include('includes/header.php');
                                         ?>
                                         <tr>
                                             <td><?= $post['id'] ?></td>
-                                            <td><?= $post['name'] ?></td>
+                                            <td class="w-25"><?= $post['name'] ?></td>
                                             <td><?= $post['cname'] ?></td>
-                                            <td><img src="../uploads/posts/<?= $post['meta_title'] ?>" alt=""></td>
+                                            <td class="w-25"><img src="../uploads/posts/<?= $post['meta_title'] ?>" class="w-100" alt=""></td>
                                             <td>
                                                 <?= $post['status'] == '1' ? 'Hidden':'Visible' ?></td>
                                             <td>

@@ -48,10 +48,6 @@ include('includes/header.php');
                                                 <form action="code.php" method="POST">
                                                     <button type="submit" name="category_delete" value="<?= $item['id'] ?>" class="btn btn-danger">Delete</a>
                                                 </form>
-<<<<<<< HEAD
-                                                
-=======
->>>>>>> 8dca751c53cd11c4005b78fa89627ab1863e461d
                                             </td>
                                         </tr>
                                         <?php
