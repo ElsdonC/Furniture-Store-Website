@@ -9,7 +9,7 @@
 
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Collections</a>
+          <a class="nav-link" aria-current="page" href="index.php">Home</a>
         </li>
         <?php
           $navbarCategory = "SELECT * FROM categories WHERE navbar_status='0' AND status='0' ";

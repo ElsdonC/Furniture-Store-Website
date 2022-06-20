@@ -27,7 +27,7 @@ include('includes/navbar.php');
                                                     <img src="uploads/posts/<?= $postItems['meta_title'] ?>" alt="<?=$postItems['name'];?>">
                                                     
                                                 </div>
-                                                <div>
+                                                <div style="margin-left: 45vh;">
                                                     <?=$postItems['description'];?>
                                                 </div>
                                             </div>
