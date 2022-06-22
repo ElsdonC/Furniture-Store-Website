@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container">
-    <img src="Images/Logo.png" alt="logo">
+  <div class="container" style="margin-left: 0;">
+    <img src="assets/images/Logo.png" style="height: 10vh;" alt="logo">
     <a class="navbar-brand" href="index.php"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <u>
-          <a class="nav-link navbar-brand fs-6" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link navbar-brand fs-5 fw-bold" style="color: #fc7114;" aria-current="page" href="index.php">Home</a>
           </u>
         </li>
         <?php
@@ -21,7 +21,7 @@
               ?>
               <li class="nav-item">
                 <u>
-                <a class="nav-link navbar-brand fs-6" href="category.php?title=<?= $navItems['slug']; ?>"><?= $navItems['name']; ?></a>
+                <a class="nav-link navbar-brand fs-5 fw-bold" href="category.php?title=<?= $navItems['slug']; ?>"><?= $navItems['name']; ?></a>
                 </u>
               </li>
               <?php
@@ -30,7 +30,7 @@
         ?>
         <li class="nav-item">
           <u>
-          <a class="nav-link navbar-brand fs-6" aria-current="page" href="ContactUs.php">Contact Us</a>
+          <a class="nav-link navbar-brand fs-5 fw-bold" style="color: #fc7114;" aria-current="page" href="ContactUs.php">Contact Us</a>
           </u>
         </li>
         

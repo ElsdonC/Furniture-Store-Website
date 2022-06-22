@@ -2,80 +2,46 @@
 include('includes/header.php');
 include('includes/navbar.php');
 ?>
-<div class="container py-5" style="padding-top: 15vh;">
-        <div class="row ">
-            <div class="col-lg-7 mx-auto">
-                <div class="card mt-2 mx-auto p-4 bg-light">
-                    <div class="card-body bg-light">
-                        <div class="container">
-                            <form id="contact-form" role="form"  method="POST" action="https://formsubmit.co/rplseattle@aol.com">
-                                <div class="controls">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="form_name" class="mb-2">Firstname *</label>
-                                                <input id="form_name" type="text" name="name" class="form-control"
-                                                    placeholder="Please enter your firstname *" required="required"
-                                                    data-error="Firstname is required.">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="form_lastname" class="mb-2">Lastname *</label>
-                                                <input id="form_lastname" type="text" name="surname"
-                                                    class="form-control mb-3" placeholder="Please enter your lastname *"
-                                                    required="required" data-error="Lastname is required.">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="form_email" class="mb-2">Email *</label>
-                                                <input id="form_email" type="email" name="email" class="form-control mb-3"
-                                                    placeholder="Please enter your email *" required="required"
-                                                    data-error="Valid email is required.">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="form_need" class="mb-2">Please specify your need *</label>
-                                                <select id="form_need" name="need" class="form-control mb-3"
-                                                    required="required" data-error="Please specify your need.">
-                                                    <option value="" selected disabled>--Select Your Issue--</option>
-                                                    <option>Request Invoice for order</option>
-                                                    <option>Request order status</option>
-                                                    <option>Haven't received cashback yet</option>
-                                                    <option>Other</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="form_message" class="mb-2">Message *</label>
-                                                <textarea id="form_message" name="message" class="form-control mb-3"
-                                                    placeholder="Write your message here." rows="4" required="required"
-                                                    data-error="Please, leave us a message."></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            
-                                            <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
-                            " value="Send Message">
+<h1 style="text-align: center; padding-top:2vh; font-family:Comic Sans MS, Comic Sans, cursive;">Royola Pacific of Seattle, Inc.</h1>
+<hr style="width:52%; margin: auto;">
+<p style="text-align: center; color:red; padding-top:2vh; font-family:Comic Sans MS, Comic Sans, cursive;">FINE FURNITURE SINCE 1976</p>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.8 -->
-            </div>
-        </div>
-    </div>
+<h6 style="text-align:center; font-family:Brush Script MT, Brush Script Std, cursive; font-size: x-large;">Established in 1976, our mission is to provide quality fine furniture to retailers.<br>With our warehouse in Seattle, we provide our valued customers with the styles of furniture for all your needs.</h6>
+<br>
+
+<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center" style="padding-top:15vh; padding-bottom:20vh; width: 50%; background-color: lightgray;">
+<table class="w-25 fs-1" style="font-family:Comic Sans MS, Comic Sans, cursive;">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    
+        <th style=" padding-bottom: 2vh; text-align:right; padding-right:1vh;" scope="row">Email:</th>
+        <td style=" padding-bottom: 2vh;"><a class="text-decoration-none" style="color:#fc7114;" href="mailto:rplseattle@aol.com">rplseattle@aol.com</a></td>
+    </tr>
+    <tr>
+    
+        <th style=" padding-bottom: 2vh;text-align:right; padding-right:1vh;" scope="row">
+    </svg>Phone:</th>
+        <td style=" padding-bottom: 2vh;">253-852-9158</td>
+    </tr>
+    <tr>
+        <th style="padding-bottom: 2vh; text-align:right; padding-right:1vh;" scope="row">Fax:</th>
+        <td style=" padding-bottom: 2vh;">253-852-9151</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+                          
 <?php
 include('includes/footer.php');
 ?>
