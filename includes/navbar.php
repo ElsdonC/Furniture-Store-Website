@@ -9,7 +9,9 @@
 
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+          <u>
+          <a class="nav-link navbar-brand fs-6" aria-current="page" href="index.php">Home</a>
+          </u>
         </li>
         <?php
           $navbarCategory = "SELECT * FROM categories WHERE navbar_status='0' AND status='0' ";
@@ -18,15 +20,22 @@
             foreach($navbarCategory_run as $navItems) {
               ?>
               <li class="nav-item">
-                <a class="nav-link" href="category.php?title=<?= $navItems['slug']; ?>"><?= $navItems['name']; ?></a>
+                <u>
+                <a class="nav-link navbar-brand fs-6" href="category.php?title=<?= $navItems['slug']; ?>"><?= $navItems['name']; ?></a>
+                </u>
               </li>
               <?php
             }
           }
         ?>
+        <li class="nav-item">
+          <u>
+          <a class="nav-link navbar-brand fs-6" aria-current="page" href="ContactUs.php">Contact Us</a>
+          </u>
+        </li>
         
 
-        <?php if(isset($_SESSION['auth_user'])) : ?>
+        <!-- <?php if(isset($_SESSION['auth_user'])) : ?>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <?= $_SESSION['auth_user']['user_name']; ?>
@@ -45,7 +54,7 @@
         <li class="nav-item">
           <a class="nav-link" href="login.php">Login</a>
         </li>
-        <?php endif; ?>
+        <?php endif; ?> -->
       </ul>
     </div>
   </div>
