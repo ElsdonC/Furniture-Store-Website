@@ -2,16 +2,16 @@
 include('includes/header.php');
 include('includes/navbar.php');
 ?>
-<h1 style="text-align: center; padding-top:2vh; font-family:Comic Sans MS, Comic Sans, cursive;">Royola Pacific of Seattle, Inc.</h1>
+<h1 style="text-align: center; padding-top:2vh;">Royola Pacific of Seattle, Inc.</h1>
 <hr style="width:52%; margin: auto;">
-<p style="text-align: center; color:red; padding-top:2vh; font-family:Comic Sans MS, Comic Sans, cursive;">FINE FURNITURE SINCE 1976</p>
+<p class="fs-4" style="text-align: center; color:red; padding-top:2vh;">FINE FURNITURE SINCE 1976</p>
 
-<h6 style="text-align:center; font-family:Brush Script MT, Brush Script Std, cursive; font-size: x-large;">Established in 1976, our mission is to provide quality fine furniture to retailers.<br>With our warehouse in Seattle, we provide our valued customers with the styles of furniture for all your needs.</h6>
+<h6 class="fs-5" style="text-align:center;">Established in 1976, our mission is to provide quality fine furniture to retailers.</h6>
 <br>
 
 <div class="d-flex justify-content-center">
 <div class="d-flex justify-content-center" style="padding-top:15vh; padding-bottom:20vh; width: 50%; background-color: lightgray;">
-<table class="w-25 fs-1" style="font-family:Comic Sans MS, Comic Sans, cursive;">
+<table class="w-25 fs-1"">
   <thead>
     <tr>
       <th scope="col"></th>
@@ -34,6 +34,10 @@ include('includes/navbar.php');
     <tr>
         <th style="padding-bottom: 2vh; text-align:right; padding-right:1vh;" scope="row">Fax:</th>
         <td style=" padding-bottom: 2vh;">253-852-9151</td>
+    </tr>
+    <tr>
+        <th style="padding-bottom: 2vh; text-align:right; padding-right:1vh;" scope="row">Address:</th>
+        <td style=" padding-bottom: 2vh;">25515 74th Ave S, Kent, WA 98032</td>
     </tr>
   </tbody>
 </table>
